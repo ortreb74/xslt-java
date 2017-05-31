@@ -1,0 +1,1 @@
+java -cp "deployed/jar/*" edu.Main deployed/master.xslt
