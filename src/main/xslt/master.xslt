@@ -4,11 +4,14 @@
   exclude-result-prefixes="xs"
   version="2.0">
   
+  <xsl:include href="slave/slave.xslt"/>
+  
   <xsl:param name = "text" as = "xs:string"/>
   
   <xsl:template match="/">
     <root>
       <xsl:value-of select = "$text"/>
+      
     </root>
   </xsl:template>
   

@@ -1,19 +1,16 @@
-package edu;
+package etude.single;
 
-import javax.xml.stream.XMLStreamWriter;
+/**
+ * Created by ext-pdonzel on 31/05/2017.
+ */
+
+
 import javax.xml.transform.stream.StreamSource;
 
 import net.sf.saxon.Configuration;
 
 import net.sf.saxon.s9api.*;
 
-import org.w3c.dom.Document;
-
-import java.io.File;
-
-/**
- * Created by ext-pdonzel on 31/05/2017.
- */
 public class Main {
 
     public static void main(String args[]) throws SaxonApiException {
@@ -34,7 +31,7 @@ public class Main {
         XdmNode node = builder.build(new StreamSource(args[0]));
         transformer.setInitialContextNode(node);
 
-        Serializer out = new Serializer(System.out);
+        Serializer out = proc.newSerializer(System.out);
         transformer.setDestination(out);
 
         transformer.transform();
