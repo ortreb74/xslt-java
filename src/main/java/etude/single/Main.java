@@ -11,7 +11,9 @@ import net.sf.saxon.Configuration;
 
 import net.sf.saxon.s9api.*;
 
-public class Main {
+public class Main
+
+{
 
     public static void main(String args[]) throws SaxonApiException {
         Configuration config = Configuration.newConfiguration();
